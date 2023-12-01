@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AuctriaProject.Application\AuctriaProject.Application.csproj" />
-    <ProjectReference Include="..\AuctriaProject.Domain\AuctriaProject.Domain.csproj" />
   </ItemGroup>
 
 </Project>
