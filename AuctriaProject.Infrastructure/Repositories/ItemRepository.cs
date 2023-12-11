@@ -43,11 +43,11 @@ namespace AuctriaProject.Infrastructure.Repositories
             {
                 if (item.Id > 0)
                 {
-                    await _sharedContext.ExecuteAsync(Queries.UpdateItem, new { id = item.Id, title = item.Title, price = item.Price });
+                    await _sharedContext.ExecuteAsync(Queries.UpdateItem, new { id = item.Id, title = item.Title, price = item.Price, availableQuantity = item.AvailableQuantity });
                 }
                 else
                 {
-                    await _sharedContext.ExecuteAsync(Queries.AddNewItem, new { title = item.Title, price = item.Price });
+                    await _sharedContext.ExecuteAsync(Queries.AddNewItem, new { title = item.Title, price = item.Price, availableQuantity = item.AvailableQuantity });
                 }
                 return true;
             }
